@@ -11,6 +11,8 @@ public class AppConfig {
 
     @Bean
     public static BeanFactoryPostProcessor beanFactoryPostProcessor() {
+
+        // 参考：https://github.com/alchemy-studio/java-snippets/pull/2
         return factory -> {
 
             var registry = (BeanDefinitionRegistry) factory;
