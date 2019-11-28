@@ -36,4 +36,8 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn -q exec:java
+      - run:
+          command: |
+            mvn install
+            mvn -q exec:java
+
